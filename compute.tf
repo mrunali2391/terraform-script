@@ -35,7 +35,7 @@ resource "aws_instance" "jenkins-instance" {
 
 #minikube-instance
 resource "aws_instance" "minikube-instance" {
-  ami             = var.instance_ami
+  ami             = "ami-09e67e426f25ce0d7"
   instance_type   = var.instance_type
   key_name        = var.keyname
   #vpc_id          = "${aws_vpc.development-vpc.id}"

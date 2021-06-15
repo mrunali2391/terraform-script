@@ -32,7 +32,7 @@ sudo service jenkins start
 
 usermod --shell /bin/bash jenkins
 
-cat <<EOF > /root/aws-june-2021.pem
+cat <<EOF > /var/lib/jenkins/aws-june-2021.pem
 -----BEGIN RSA PRIVATE KEY-----
 MIIEogIBAAKCAQEAihLjKGnELnoBh/d+SYktpg/lZgIpPaQhUvV4grQbHtU23K47
 WytVrq86LcSMDtD/ADaAarLFnNmuHktif4zwGzsKW42S1gQo8Ub7Ne9S6yxRraLU
@@ -61,7 +61,8 @@ ToPbmn72GIyxnunvXJgCetciUASHqIZtLWFVKFX/3Qyi5puJ21000af/FmmqCBZa
 04FwHRQgqScpn0L9cub9bPFd3fU3g1R5a9WnhCcgaSQaDrLwSLI=
 -----END RSA PRIVATE KEY-----
 
-chmod 400 aws-june-2021.pem
+chmod 400 /var/lib/jenkins/aws-june-2021.pem
+sudo chown -R jenkins:jenkins aws-june-2021.pem
 
 mkdir /var/lib/jenkins/.ssh
 ssh-keygen -q -t rsa -N '' -f /var/lib/jenkins/.ssh/id_rsa <<<y >/dev/null 2>&1

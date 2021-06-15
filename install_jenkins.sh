@@ -32,7 +32,7 @@ sudo service jenkins start
 
 usermod --shell /bin/bash jenkins
 
-cat <<EOF > /var/lib/jenkins/aws-june-2021.pem
+cat <<EOF > /root/aws-june-2021.pem
 -----BEGIN RSA PRIVATE KEY-----
 MIIEogIBAAKCAQEAihLjKGnELnoBh/d+SYktpg/lZgIpPaQhUvV4grQbHtU23K47
 WytVrq86LcSMDtD/ADaAarLFnNmuHktif4zwGzsKW42S1gQo8Ub7Ne9S6yxRraLU
@@ -61,6 +61,7 @@ ToPbmn72GIyxnunvXJgCetciUASHqIZtLWFVKFX/3Qyi5puJ21000af/FmmqCBZa
 04FwHRQgqScpn0L9cub9bPFd3fU3g1R5a9WnhCcgaSQaDrLwSLI=
 -----END RSA PRIVATE KEY-----
 
+cp -r /root/aws-june-2021.pem /var/lib/jenkins
 chmod 600 /root/aws-june-2021.pem
 chmod 600 /var/lib/jenkins/aws-june-2021.pem
 sudo chown -R jenkins:jenkins aws-june-2021.pem

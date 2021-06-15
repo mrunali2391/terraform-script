@@ -61,7 +61,8 @@ ToPbmn72GIyxnunvXJgCetciUASHqIZtLWFVKFX/3Qyi5puJ21000af/FmmqCBZa
 04FwHRQgqScpn0L9cub9bPFd3fU3g1R5a9WnhCcgaSQaDrLwSLI=
 -----END RSA PRIVATE KEY-----
 
-chmod 400 /var/lib/jenkins/aws-june-2021.pem
+chmod 600 /root/aws-june-2021.pem
+chmod 600 /var/lib/jenkins/aws-june-2021.pem
 sudo chown -R jenkins:jenkins aws-june-2021.pem
 
 mkdir /var/lib/jenkins/.ssh

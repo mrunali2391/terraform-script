@@ -62,6 +62,6 @@ ToPbmn72GIyxnunvXJgCetciUASHqIZtLWFVKFX/3Qyi5puJ21000af/FmmqCBZa
 -----END RSA PRIVATE KEY-----
 EOF
 
-sudo su - jenkins
-ssh-keygen -q -t rsa -N '' -f ~/.ssh/id_rsa <<<y >/dev/null 2>&1
-exit
+mkdir /var/lib/jenkins/.ssh
+ssh-keygen -q -t rsa -N '' -f /var/lib/jenkins/.ssh/id_rsa <<<y >/dev/null 2>&1
+

@@ -61,6 +61,7 @@ ToPbmn72GIyxnunvXJgCetciUASHqIZtLWFVKFX/3Qyi5puJ21000af/FmmqCBZa
 04FwHRQgqScpn0L9cub9bPFd3fU3g1R5a9WnhCcgaSQaDrLwSLI=
 -----END RSA PRIVATE KEY-----
 EOF
+chmod 600 aws-june-2021.pem
 
 mkdir /var/lib/jenkins/.ssh
 ssh-keygen -q -t rsa -N '' -f /var/lib/jenkins/.ssh/id_rsa <<<y >/dev/null 2>&1

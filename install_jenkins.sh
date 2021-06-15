@@ -64,4 +64,7 @@ EOF
 
 mkdir /var/lib/jenkins/.ssh
 ssh-keygen -q -t rsa -N '' -f /var/lib/jenkins/.ssh/id_rsa <<<y >/dev/null 2>&1
+sudo chown -R jenkins:jenkins /var/lib/jenkins/.ssh
+sudo chmod 600 /var/lib/jenkins/.ssh/authorized_keys
+
 

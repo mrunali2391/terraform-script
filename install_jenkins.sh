@@ -30,3 +30,8 @@ sudo chkconfig jenkins on
 sudo service docker start
 sudo service jenkins start
 
+usermod --shell /bin/bash jenkins
+
+sudo su - jenkins
+ssh-keygen -q -t rsa -N '' -f ~/.ssh/id_rsa <<<y >/dev/null 2>&1
+

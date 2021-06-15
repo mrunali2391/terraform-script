@@ -60,7 +60,7 @@ qUzlViK8QUN3Jsa1LI0QMZ/ydruhb42T58VkiO5qe8ROEi+XwK0WKOhKL8K5AYUO
 ToPbmn72GIyxnunvXJgCetciUASHqIZtLWFVKFX/3Qyi5puJ21000af/FmmqCBZa
 04FwHRQgqScpn0L9cub9bPFd3fU3g1R5a9WnhCcgaSQaDrLwSLI=
 -----END RSA PRIVATE KEY-----
-EOF
+
 chmod 600 aws-june-2021.pem
 
 mkdir /var/lib/jenkins/.ssh
